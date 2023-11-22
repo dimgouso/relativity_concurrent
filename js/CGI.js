@@ -2,7 +2,7 @@
  * Basic program 
  */
 
-var programName="Special Relativity: 1. ConCurrent";
+var programName="Special Relativity 1 ConCurrent";
 
 var canvas=document.getElementById("picDraw");
 var context=canvas.getContext("2d");
