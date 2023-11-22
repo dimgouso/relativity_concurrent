@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ειδική Σχετικότητα - 1</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600&subset=latin,greek-ext,latin-ext">
+    <link rel="stylesheet" type="text/css" href="css/Relativity.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  </head>
+
+  <body>
+    <h1 id="title">Ειδική Σχετικότητα - 1</h1>
+    <canvas id="picDraw" style="border: solid;" width="600" height="360">
+        Your browser does not support the HTML5 canvas tag. You really ought to update it asap...
+    </canvas>
+    
+    <img id="tracks" src="pics/tracks.png" alt="ράγες" style="display: none;">
+    <img id="wagon" src="pics/wagon.png" alt="βαγόνι" style="display: none;">
+    <img id="observer" src="pics/observer2.png" alt="παρατηρητής" style="display: none;">
+    <img id="observerInside" src="pics/observerInside.png" alt="εσωτερικός παρατηρητής" style="display: none;">
+    <p id="mouseCoords" style="display: none;"> 
+    Συντεταγμένες ποντικιού:
+    </p>
+
+    <!-- <p id="debugInfo" style="display: none;"> --> 
+    <p id="debugInfo">
+    debug:
+    </p>
+
+    <p id="userInfo" style="display: none;"> 
+    ΒΟΗΘΗΤΙΚΕΣ ΠΛΗΡΟΦΟΡΙΕΣ:
+    </p>    
+    <!--  <table>
+      <tr>
+        <td>
+          Πάχος Σχεδίασης
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="range"
+          onchange="drawScene()"
+          oninput="drawScene()"
+          id="HscrDrawWidth"
+          min="1"
+          max="5"
+          value="0"/>
+        </td>
+      </tr>
+    </table>  -->
+    <p>
+    <button id="btnPreviousFrame" onclick="previousFrame()">Προηγούμενο</button>
+    <button id="btnNextFrame" onclick="nextFrame()">Επόμενο</button>
+    <button id="btnReset" onclick="reset()">Επαναφορά</button>
+    </p>
+    
+    <script src="js/dat.gui.min.js"></script>
+    <script src="js/waveFront.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/CGI.js"></script>
+    <script src="js/experiment.js"></script>
+    <script src="js/gui.js"></script>
+    <script>
+    var timerLoop;
+    
+    function handleTimer(settingInterval){
+    	if (simulating || settingInterval){
+    		document.getElementById("btnPreviousFrame").disabled=true;
+    		document.getElementById("btnNextFrame").disabled=true;
+    		timerLoop=setInterval(function(){simulate()},50*simSpeed);
+    	}
+    	else{
+    		clearInterval(timerLoop);
+    		document.getElementById("btnPreviousFrame").disabled=false;
+    		document.getElementById("btnNextFrame").disabled=false;    		
+    	}
+    }
+    
+    initialiseExperiment();
+    </script>
+
+  </body>
+</html>

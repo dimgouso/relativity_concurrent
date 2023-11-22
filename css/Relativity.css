@@ -1,0 +1,49 @@
+.app-content {
+    /*background: url("img/white_trans.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    margin: 4% auto 0;
+    padding: 0 1%;
+    min-height:400px;
+
+}
+
+h1 {
+    /*background: url("img/white_trans.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    color: #787a6d;
+    display: block;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 20px 0;
+    padding: 5px 10px;
+}
+
+
+h1 span {
+    /*background: url("img/planS.png") no-repeat scroll left center rgba(0, 0, 0, 0);*/
+    display: block;
+    font-weight: normal;
+    height: 38px;
+    padding: 10px 0 0 45px;
+}
+
+.under_constr{
+	text-align:center;
+	padding-top:30px;
+	font-size:30px;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size:100%;}
+
+p,table,form{
+	width:800px;
+	margin:20px auto;
+	font-size:0.9em;
+
+}
+
+canvas {
+	margin-left: 15%;
+	border: solid #fff 3px;
+	display: block;
+}	
